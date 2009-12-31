@@ -1,0 +1,10 @@
+<script type="text/javascript">
+chrome.browserAction.onClicked.addListener(function(tab){
+	if (/^https?:\/\//i.test(tab.url))
+		chrome.tabs.update(tab.id,{url: "http://linkhay.com/submit?link_url=" + escape(tab.url) });
+});
+</script>
+<!--
+	Chrome LinkHay Submit by Bao Nguyen <contact@nqbao.com>
+	Released under GLPv3 license.
+-->
